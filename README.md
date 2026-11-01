@@ -1,4 +1,14 @@
-# Juan José Cáceres — Portfolio
+<!-- jnce-header -->
+# Jnce · Portfolio
+
+> Jnce · Portfolio — versión color
+
+**🛠️ Tecnologías:** HTML · CSS · JavaScript  
+**👤 Diseño y desarrollo:** [Juan José Cáceres](https://juancjose.github.io/jnce-studio/)
+
+![Vista previa de Jnce · Portfolio](docs/preview.jpg)
+
+---
 
 **Diseñador gráfico · Indumentaria y deportiva**
 
