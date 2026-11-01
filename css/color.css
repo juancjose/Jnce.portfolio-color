@@ -5,24 +5,23 @@
 body{font-family:Inter,system-ui,sans-serif}
 h1,h2,h3,.section-title{font-family:Sora,Inter,sans-serif}
 /* nav */
-.nav{backdrop-filter:saturate(1.6) blur(14px);background:color-mix(in srgb,var(--bg) 72%,transparent)}
+.nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:color-mix(in srgb,var(--bg) 94%,transparent)}
 nav a{position:relative}nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
 nav a:hover::after{transform:scaleX(1)}
 .logo:hover{color:var(--accent)}
 /* hero animado */
 .hero{position:relative;overflow:hidden;min-height:min(92vh,820px);background:var(--bg)}
 .hero .container{position:relative;z-index:1}
-.blobs{position:absolute;inset:0;z-index:0;filter:blur(60px);opacity:.85}
-.blobs span{position:absolute;border-radius:50%;mix-blend-mode:normal}
-.b1{width:46vw;height:46vw;max-width:620px;max-height:620px;right:-8vw;top:-12vw;background:radial-gradient(circle,#ff2e88,transparent 65%);animation:float1 14s ease-in-out infinite}
-.b2{width:40vw;height:40vw;max-width:560px;max-height:560px;right:18vw;bottom:-18vw;background:radial-gradient(circle,#7c3aed,transparent 65%);animation:float2 18s ease-in-out infinite}
-.b3{width:32vw;height:32vw;max-width:440px;max-height:440px;left:-8vw;top:20%;background:radial-gradient(circle,#ff8a00,transparent 65%);animation:float3 16s ease-in-out infinite;opacity:.8}
-.blobs .grain{inset:0;border-radius:0;width:auto;height:auto;filter:none}
+.blobs{position:absolute;inset:0;z-index:0;opacity:.85;pointer-events:none;contain:strict}
+.blobs span{position:absolute;border-radius:50%;will-change:transform;transform:translateZ(0)}
+.b1{width:46vw;height:46vw;max-width:620px;max-height:620px;right:-8vw;top:-12vw;background:radial-gradient(circle closest-side,#ff2e88cc 0%,#ff2e8866 40%,#ff2e881f 70%,transparent 100%);animation:float1 14s ease-in-out infinite}
+.b2{width:40vw;height:40vw;max-width:560px;max-height:560px;right:18vw;bottom:-18vw;background:radial-gradient(circle closest-side,#7c3aedcc 0%,#7c3aed66 40%,#7c3aed1f 70%,transparent 100%);animation:float2 18s ease-in-out infinite}
+.b3{width:32vw;height:32vw;max-width:440px;max-height:440px;left:-8vw;top:20%;background:radial-gradient(circle closest-side,#ff8a00cc 0%,#ff8a0066 40%,#ff8a001f 70%,transparent 100%);animation:float3 16s ease-in-out infinite;opacity:.8}
+.blobs .grain{display:none}
 @keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-6vw,6vw) scale(1.12)}}
 @keyframes float2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8vw,-5vw) scale(.9)}}
 @keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(5vw,-4vw) scale(1.1)}}
-h1{font-size:clamp(3rem,10vw,7.5rem);font-weight:800;letter-spacing:-.045em;line-height:.95;background:var(--grad);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s ease-in-out infinite}
-@keyframes shine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+h1{font-size:clamp(3rem,10vw,7.5rem);font-weight:800;letter-spacing:-.045em;line-height:.95;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .role{font-size:clamp(1.2rem,2.6vw,1.8rem);font-weight:700;color:var(--fg);margin-top:.8rem}
 .hero p{font-size:clamp(1rem,1.6vw,1.2rem);max-width:640px}
 /* botones redondos con borde degradado */
